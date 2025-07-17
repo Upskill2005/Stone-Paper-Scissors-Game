@@ -1,0 +1,103 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Choices container */
+.choices {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.choice {
+    background-color: #fff;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.choice:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Score containers */
+.choices div:nth-child(4),
+.choices div:nth-child(5) {
+    background-color: #fff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#score, #comp-score {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.choices div:last-child {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Image styles */
+.choice img {
+    height: 130px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .choices {
+        flex-direction: column;
+    }
+
+    .choice img {
+        height: 100px;
+    }
+}
+.scores {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.scores div {
+    background-color: #fff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    min-width: 150px;
+}
